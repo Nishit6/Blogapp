@@ -1,0 +1,71 @@
+
+   <%- include("../partials/header") %> 
+   <%- include("../partials/navbar") %> 
+<br>
+<br>
+<br>
+    <h1 style="font-size: 2rem;font-family: 'Krona One', sans-serif;">Add New Blog</h1>
+  
+<hr>
+
+
+    <form  class="validate-form" novalidate method="POST" action="/blogs"  style="margin: 20px 100px 100px 350px; border: 2px solid #ccc; padding: 20px; width: 50vw;background-image: url('https://images.unsplash.com/photo-1619252584172-a83a949b6efd?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8aVVJc25WdGpCMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+        <div class="mb-3" >
+          <label for="author" class="form-label">Author Name:</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Author Name" name="author" required>
+          <div id="emailHelp" class="form-text">Give an Author</div>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please add a valid author name.
+          </div>
+        </div>
+        <div class="mb-3" >
+            <label for="img" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" id="img"  placeholder="Enter URL" name="img" required>
+            <div id="emailHelp" class="form-text">Put your url here</div>
+            <div class="valid-feedback">
+              Looks good!!
+            </div>
+            <div class="invalid-feedback">
+              Please choose a URL.
+            </div>
+          </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Title:</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter title" name="title" required>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please Enter a Valid Title.
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Text:</label>
+            <textarea class="form-control" id="text" rows="3"name="text"  required></textarea>
+              <div class="valid-feedback">
+                Looks good!!
+              </div>
+              <div class="invalid-feedback">
+                Please add some text.
+              </div>
+          </div>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+      </form>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%- include("../partials/footer") %> 

@@ -1,0 +1,10 @@
+body{
+    background-image: linear-gradient(to right, rgb(207, 197, 197) , rgb(73, 73, 73));
+}
+
+#heading{
+
+    font-family: 'Antonio', sans-serif;
+    margin-left: 15px;
+}
+

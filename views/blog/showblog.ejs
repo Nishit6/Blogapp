@@ -1,0 +1,36 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+<h2 style="font-size: 2rem; margin-left: 10px; font-family: 'Krona One', sans-serif; margin-top: 1px;">Details</h2>
+<hr>
+
+
+
+
+
+    <div class="card" style="width: 35rem; box-shadow: 2px 4px 4px gray; margin: 40px auto;">
+        <h5 class="card-title" style="text-align: center;padding: 5px;"><%=showBlog.title%></h5>
+        <img   style="height: 60vh; padding: 12px;"  src="<%= showBlog.img %> " class="card-img-top" >
+        <div class="card-body" >
+          <h3 class="card-title"><%=showBlog.author%></h3>
+          
+          <p class="card-text"><%=showBlog.text%></p>
+
+          <a href="/blogs"  class="btn btn-outline-secondary">Return</a>
+        
+        
+       
+    
+          
+        
+        </div>
+            
+      </div>
+      
+
+ 
+
+
+   
+
+
+  <%- include("../partials/footer") %> 

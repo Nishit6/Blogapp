@@ -1,0 +1,71 @@
+
+
+
+
+<%- include("../partials/header") %> 
+
+<%- include("../partials/navbar") %> 
+
+
+  <br>
+  <br>
+  <br>
+
+
+    <h1 id="heading"> Arts & Culture</h1>
+    <hr>
+<section >
+    <ul>
+        <%for(let b of blog){%>
+            <div   class="card" style="width: 45rem; box-shadow: 2px 4px 4px gray; margin: 40px auto; background-color: rgb(253, 241, 193);">
+                <h5 class="card-title" style="text-align: center;padding: 5px;padding-top: 20px; font-size: 2.5rem;font-family: 'Playfair Display', serif;"><%= b.title %> </h5>
+                <img src="<%= b.img %> " class="card-img-top" style="padding: 20px;">
+             
+                <ul class="list-group list-group-flush">
+                    
+              <strong> <li class="list-group-item" style="text-shadow: 1px 2px 3px grey; background-color: rgb(251, 243, 168); "><%=b.author %> </li></strong>
+              
+                </ul>
+                <div class="card-body">
+                 
+                    <p class="card-text"><%= b.text.substring(0,190) %>... </p>
+                  </div>
+
+
+                  <p>
+                    <a  style="padding: 20px;" class="nav-link-active" data-bs-toggle="collapse" href="#collapse" role="button" aria-expanded="false" aria-controls="collapse">
+                      More..
+                    </a>
+                    <br>
+                    
+                  </p>
+                  <div class="collapse" id="collapse">
+                    <div class="card card-body">
+
+                        <a href="/blogs/<%= b._id %> " class="btn btn-outline-info">Details</a>
+                        <br>
+                        <a href="/blogs/<%= b._id %>/edit "  class="btn btn-warning" style="width: 4.5rem;">Edit</a>
+                        <br>
+
+                        <form action="/blogs/<%= b._id %>?_method=DELETE " method="post">
+                            
+                              <button class="btn btn-danger">Delete</button>
+                        </form>
+                        
+                    </div>
+                  </div>
+
+
+
+
+              </div>
+
+         
+         
+        <%  } %>
+
+    </ul>
+</section>
+
+
+<%- include("../partials/footer") %> 
